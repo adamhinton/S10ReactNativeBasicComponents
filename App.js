@@ -1,14 +1,13 @@
 import React from 'react';
-import {Text, SafeAreaView} from 'react-native';
+import {Text, SafeAreaView, Image} from 'react-native';
 
 const App = () => {
   return (
     <SafeAreaView>
-      <Text>
-        boopbeep Hi, I just completed my first React Native Assignment!
-      </Text>
+      <Image source={require('./cake.png')} style={{width: 100, height: 100}} />
     </SafeAreaView>
   );
 };
 
 export default App;
+˝˝
