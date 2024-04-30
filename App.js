@@ -5,6 +5,7 @@ import {SafeAreaView, Text, TextInput} from 'react-native';
 const App = () => {
   const [textValue, setTextValue] = useState('');
   const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('');
 
   return (
     <SafeAreaView>
@@ -27,7 +28,18 @@ const App = () => {
         secureTextEntry={true}
         autoFocus={true}
         placeholder="Password"
-        keyboardType="default"
+        keyboardType="numeric"
+      />
+
+      <TextInput
+        style={{borderWidth: 1, padding: 10, borderRadius: 4}}
+        value={email}
+        onChangeText={value => {
+          setEmail(value);
+        }}
+        autoFocus={true}
+        placeholder="Email"
+        keyboardType="email-address"
       />
     </SafeAreaView>
   );
