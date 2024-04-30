@@ -37,6 +37,7 @@ const App = () => {
         onChangeText={value => {
           setEmail(value);
         }}
+        returnKeyType="search"
         autoFocus={true}
         placeholder="Email"
         keyboardType="email-address"
