@@ -7,10 +7,13 @@ import {
   Switch,
   Text,
   TextInput,
+  TouchableOpacity,
   View,
 } from 'react-native';
 
-import {FontAwesomeIcon} from "@fortawesome/react-native-fontawesome";
+import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
+
+import {faCheck} from '@fortawesome/free-solid-svg-icons';
 
 const App = () => {
   const [email, setEmail] = useState('');
@@ -44,7 +47,7 @@ const App = () => {
         {/* Button doesn't come with style prop. Could use Pressable instead */}
         {/* <Button title="Submit" color="red" /> */}
 
-        <Pressable
+        <TouchableOpacity
           disabled={email.length === 0 || password.length < 8}
           style={[
             {backgroundColor: 'black'},
@@ -56,10 +59,20 @@ const App = () => {
             console.log('password:', password);
             console.log('shouldKeepLoggedIn:', shouldKeepLoggedIn);
           }}>
-          <Text style={{color: 'white', textAlign: 'center', padding: 10}}>
-            Submit
-          </Text>
-        </Pressable>
+          <View
+            style={{
+              flex: 1,
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}>
+            <Text style={{color: 'white', textAlign: 'center', padding: 10}}>
+              Submit
+            </Text>
+
+            <FontAwesomeIcon icon={faCheck} style={{color: 'white'}} />
+          </View>
+        </TouchableOpacity>
       </ScrollView>
     </SafeAreaView>
   );
