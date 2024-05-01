@@ -10,6 +10,8 @@ import {
   View,
 } from 'react-native';
 
+import {FontAwesomeIcon} from "@fortawesome/react-native-fontawesome";
+
 const App = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
