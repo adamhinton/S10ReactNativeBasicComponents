@@ -1,7 +1,6 @@
+/* eslint-disable react-native/no-inline-styles */
 import React, {useState} from 'react';
 import {
-  Button,
-  Image,
   Pressable,
   SafeAreaView,
   ScrollView,
