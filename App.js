@@ -41,7 +41,7 @@ const App = () => {
           onPress={() => {
             console.log('clicked');
             console.log('email:', email);
-            console.˝ log('password:', password);
+            console.log('password:', password);
           }}>
           <Text style={{color: 'white', textAlign: 'center', padding: 10}}>
             Submit
