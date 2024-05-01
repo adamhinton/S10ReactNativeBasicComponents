@@ -4,13 +4,16 @@ import {
   Pressable,
   SafeAreaView,
   ScrollView,
+  Switch,
   Text,
   TextInput,
+  View,
 } from 'react-native';
 
 const App = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [shouldKeepLoggedIn, setShouldKeepLoggedIn] = useState(true);
 
   return (
     <SafeAreaView>
@@ -28,6 +31,14 @@ const App = () => {
           onChangeText={setPassword}
         />
 
+        <View style={{flex: 1, flexDirection: 'row', alignItems: 'center'}}>
+          <Switch
+            value={shouldKeepLoggedIn}
+            onValueChange={setShouldKeepLoggedIn}
+          />
+          <Text>Keep Me Logged In</Text>
+        </View>
+
         {/* Button doesn't come with style prop. Could use Pressable instead */}
         {/* <Button title="Submit" color="red" /> */}
 
@@ -41,6 +52,7 @@ const App = () => {
             console.log('clicked');
             console.log('email:', email);
             console.log('password:', password);
+            console.log('shouldKeepLoggedIn:', shouldKeepLoggedIn);
           }}>
           <Text style={{color: 'white', textAlign: 'center', padding: 10}}>
             Submit
